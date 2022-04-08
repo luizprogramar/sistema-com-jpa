@@ -12,12 +12,12 @@ import jakarta.persistence.Table;
 public class Clube {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
     private int codigo;
 	private String nome;
 	@Column(name = "TB_Capacid")
 	private int capacidade;
-	private String dtFundacao;
+	private int dtFundacao;
 	public String getNome() {
 		return nome;
 	}
@@ -30,11 +30,11 @@ public class Clube {
 	public void setCapacidade(int capacidade) {
 		this.capacidade = capacidade;
 	}
-	public String getDtFundacao() {
+	public int getDtFundacao() {
 		return dtFundacao;
 	}
-	public void setDtFundacao(String dtFundacao) {
-		this.dtFundacao = dtFundacao;
+	public void setDtFundacao(int nt) {
+		this.dtFundacao = nt;
 	}
 	
 	

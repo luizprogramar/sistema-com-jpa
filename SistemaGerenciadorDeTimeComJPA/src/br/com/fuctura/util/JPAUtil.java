@@ -13,7 +13,7 @@ public class JPAUtil {
 	
 	public static EntityManagerFactory getEntityManagerFactory() {
 		if(fabrica == null) {
-			fabrica = Persistence.createEntityManagerFactory("Fuctura_PU");
+			fabrica = Persistence.createEntityManagerFactory("Fuctura-PU");
 			
 		}
 		return fabrica;

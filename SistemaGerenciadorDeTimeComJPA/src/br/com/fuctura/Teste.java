@@ -1,6 +1,8 @@
 package br.com.fuctura;
 
+import br.com.fuctura.Dao.ClubeDao;
 import br.com.fuctura.Dao.JogadorDAO;
+import br.com.fuctura.model.Clube;
 import br.com.fuctura.model.Jogador;
 
 public class Teste {
@@ -35,6 +37,13 @@ public class Teste {
 		jog.setCamisa(8);
 		jog.setRemovido(false);
 		
+		Jogador jog2 = new Jogador();
+		jog2.setCodigo(0);
+		jog2.setNome("dunga");
+		jog2.setIdade(29);
+		jog2.setCamisa(7);
+		jog2.setRemovido(false);
+		
 		
 		JogadorDAO inserir= new JogadorDAO();
 		
@@ -42,11 +51,18 @@ public class Teste {
 		inserir.salvar(dao2);
 		inserir.salvar(dao3);
 		inserir.salvar(jog);
+		inserir.salvar(jog2);
+		
+        Clube clube = new Clube();
+        clube.setNome("vasco");
+        clube.setCapacidade(100);
+        clube.setDtFundacao(1910);
+        
+        ClubeDao inserir2 = new ClubeDao();
+        
+        inserir2.salvar(clube);
 		
 
-		
-
-	
 	}
 
 }
